@@ -246,6 +246,7 @@ int list_remove(struct list *l, int data)
 	}
 	if(current->_value ==data){
 		temp = current->_next;
+
 		current->_prev->_next = temp;
 		free(current);
 		//
@@ -264,10 +265,13 @@ int list_rremove(struct list *l, int data)
 		temp = current->_prev;
 	}
 	if(current->_value ==data){
-
+		temp = current->_prev;
+		temp->_next = current->_next;
+		temp->_next->_prev = temp;
+		free(current);
 	}
 	else{
-		
+
 	}
 	return 0;
 }

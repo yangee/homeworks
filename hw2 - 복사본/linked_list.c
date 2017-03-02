@@ -260,6 +260,15 @@ int list_rremove(struct list *l, int data)
 {	int reverse = l->_length;
 	_list_node *current = l->_tail;
 	_list_node *temp;
+	while(current->_value!=data && current != l->_head){
+		temp = current->_prev;
+	}
+	if(current->_value ==data){
+
+	}
+	else{
+		
+	}
 	return 0;
 }
 int main()

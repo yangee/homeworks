@@ -1,0 +1,5 @@
+CC=gcc
+CFLAGS = -l 
+
+linked_list = linked_list.o
+    $(CC) -o linked_list linked_list.o -l
